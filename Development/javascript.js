@@ -23,7 +23,7 @@ function createPass() {
     var char = "";
     var number = "01234567890"
     var upperAl = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    var LowerAl = "abcdefghijklmnopqrstuvwxyz"
+    var lowerAl = "abcdefghijklmnopqrstuvwxyz"
     var specialAl = "!@#$%^&*()"
     if (askChar === true) {
         char = char.concat(specialAl)
@@ -35,14 +35,13 @@ function createPass() {
         char = char.concat(upperAl)
     };
     if (askLower === true) {
-        char = char.concat(LowerAl)
+        char = char.concat(lowerAl)
     };
 
     var charList = "";
     for (var i = 0; i < askLength; i++) {
         charList += char[Math.floor(Math.random() * char.length)];
     }
-    console.log("IT WORKED")
     document.getElementById("password").value = charList
 }
 
